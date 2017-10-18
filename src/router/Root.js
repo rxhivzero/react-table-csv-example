@@ -1,8 +1,7 @@
 import React from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch , HashRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import AppContainer from '../container/AppContainer';
-import { HashRouter } from 'react-router-dom'
 import NoMatch from '../components/NoMatch';
 
 const Root = (props) => {
@@ -10,7 +9,7 @@ const Root = (props) => {
     <Provider store={props.store}>
       <Router history={props.history}>
         <Switch>
-          <Route exact path="/" component={AppContainer}/>
+          <Route exact path="" component={AppContainer}/>
           <Route component={NoMatch} />
         </Switch>
       </Router>

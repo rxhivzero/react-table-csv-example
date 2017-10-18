@@ -35,7 +35,7 @@ const mapDispatchToProps = (dispatch) => {
     getCsv: (csvId) => {
       let csvData = { title: [] , content : [] };
       let first = true;      
-      axios.get(`/public/csv/${csvId}.csv`)
+      axios.get(`public/csv/${csvId}.csv`)
       .then(function (response) {
         const csvStr = response.data;
         csvtojson({ noheader: true })
